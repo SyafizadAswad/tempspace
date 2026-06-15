@@ -1,0 +1,62 @@
+<app-user-navbar></app-user-navbar>
+<div class="container-list">
+        
+        <div class="tools">
+            <h2>機械一覧</h2>
+            <button class="btn" routerLink="/machine/register">新規登録</button>    
+            <select 
+            class="sort-options"
+            [value]="sortKey"
+            (change)="onSortInputKey($event); sortBy()">
+                <option value="" disabled selected hidden>並び変え…</option>
+                <option value="machineId">機械ID</option>
+                <option value="machineName">機械名</option>
+                <option value="location">設置場所</option>
+                <option value="installDate-latest">設置日(新しい順)</option>
+                <option value="installDate-oldest">設置日(古い順)</option>
+                <option value="status">ステータス</option>
+            </select>
+            <div class="search">
+                <input type="search">
+            </div>
+            <div class="btn">検索</div>
+        </div>
+
+        <div class="table-wrap">
+            
+            <table class="machine-table">
+                <thead class="machine-head">
+                    <tr>
+                        <th>No</th>
+                        <th>機械ID</th>
+                        <th>機械名</th>
+                        <th>設置場所</th>
+                        <th>設置日</th>
+                        <th>データ取得日時</th>
+                        <th>データ</th>
+                        <th>ステータス</th>
+                        <th>アクション</th>
+                    </tr>
+                </thead>
+                <tbody class="machine-body">
+                    @for (mac of machines(); track mac.machineId; let i = $index) {
+                        <tr>
+                            <td>{{ i + 1 }}</td>
+                            <td><a [routerLink]="['/machine', mac.machineId]">{{ mac.machineId }}</a></td>
+                            <td>{{ mac.machineName }}</td>
+                            <td>{{ mac.location }}</td>
+                            <td>{{ mac.installDate | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+                            <td>{{ mac.dataDate | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+                            <td>{{ trimFloat(mac.data) }}</td>
+                            <td [ngStyle]="{'color': getStatusColor(mac.status)}">{{ mac.status }}</td>
+                            <td><select class="actions">
+                                <option value="" selected>...</option>
+                                <option value="edit">編集</option>
+                                <option value="delete">削除</option>
+                            </select></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        </div>

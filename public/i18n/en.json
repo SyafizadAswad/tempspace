@@ -1,0 +1,116 @@
+{
+    "common": {
+        "companyName": "Tanaka Manufacturing Co. Ltd.",
+        "title": "Machine Surveillance App",
+        "logout": "Logout"
+    },
+    "language": {
+        "ja": "Japanese",
+        "en": "English",
+        "bm": "Bahasa Melayu"
+    },
+    "errorMessage": {
+        "requiredId": "User ID is required",
+        "requiredPassword": "Password is required",
+        "requiredUsername": "Username is required",
+        "maxLengthId": "User ID must be 4 digits",
+        "maxLengthUsername": "Username must be within 30 characters",        
+        "minLengthPassword": "Password must be above 8 characters",
+        "patternId": "ID must not contain full-width characters and numbers",
+        "patternPassword": "Password must be a combination of character, number and symbol",
+
+        "requiredMachineId": "Machine ID is required",
+        "requiredMachineName": "Machine name is required",
+        "requiredLocation": "Location is required",
+        "requiredInstallDate": "Install date is required",
+        "maxLengthMachineId": "Machine ID must be 8 characters",
+        "patternMachineIdWidth": "Machine ID must not contain full-width characters and numbers",
+        "patternMachineIdFormat": "Machine ID must be in a format of 'AAA-0000'\n(A: any alphabet, 0: any number)"
+    },
+    "login": {
+        "login": "Login",
+        "userId": "User ID",
+        "password": "Password",
+        "register": "Register"
+    },
+    "registerUser": {
+        "title": "Register",
+        "login": "Login",
+        "userId": "User ID",
+        "password": "Password",
+        "username": "Username",
+        "register": "Register",
+        "back": "Back"
+    },
+    "machineList": {
+        "title": "Machine List",
+        "add": "Add new",
+        "sortBy": "Sort by...",
+        "search": "Search",
+        "machineId": "Machine ID",
+        "machineName": "Machine name",
+        "location": "Location",
+        "installDate": "Install date",
+        "installDateLatest": "Install date(latest)",
+        "installDateOldest": "Install date(oldest)",
+        "dataDate": "Data date",
+        "data": "Data",
+        "status": "Status",
+        "action": "Action",
+        "正常": "STABLE",
+        "異常": "UNSTABLE",
+        "edit": "Edit",
+        "delete": "Delete"
+    },
+    "registerMachine": {
+        "title": "Add new machine",
+        "machineId": "Machine ID",
+        "machineName": "Machine name",
+        "location": "Location",
+        "installDate": "Install date",
+        "register": "Add",
+        "back": "Back"
+    },
+    "displaySetting": {
+        "greeting": "Hello!",
+        "title": "Display Settings",
+        "machineId": "Machine ID",
+        "machineName": "Machine name",
+        "location": "Location",
+        "installDate": "Install date",
+        "dataDate": "Data date",
+        "data": "Data",
+        "status": "Status",
+        "close": "Close"
+    },
+    "machineData": {
+        "title": "Machine Data",
+        "machineId": "Machine ID",
+        "machineName": "Machine name",
+        "location": "Location",
+        "installDate": "Install date",
+        "status": "Status",
+        "latestData": "Latest data",
+        "dataDate": "Data date",
+        "data": "Data",
+        "正常": "STABLE",
+        "異常": "UNSTABLE",
+        "back": "Back"
+    },
+    "machineEdit": {
+        "title": "Edit Machine Info",
+        "machineId": "Machine ID",
+        "machineName": "Machine name",
+        "location": "Location",
+        "installDate": "Install date",
+        "save": "Save",
+        "cancel": "Cancel"
+    },
+    "alert": {
+        "delete": "Are you sure you want to delete?",
+        "register": "Are you sure you want to register?", 
+        "edit": "Are you sure you want to edit?" ,
+        "inputError": "Input error."
+    }
+    
+}

@@ -1,0 +1,44 @@
+<app-user-navbar></app-user-navbar>
+<div class="display-setting-container">
+            <p>{{ 'displaySetting.greeting' | translate }}</p>
+            
+            <div class="display-setting-menu">
+                <p>{{ 'displaySetting.title' | translate }}</p>
+                @for (ds of dispSetting(); track ds.columnName ){
+                    <div class="display-setting-checkboxes">
+                        <div class="checkbox-horizontal">
+                            <label>{{ 'displaySetting.machineId' | translate }}</label>
+                            <input type="checkbox" class="checkbox" [(ngModel)]="ds.displayFlag">
+                        </div>
+                        <div class="checkbox-horizontal">
+                            <label>{{ 'displaySetting.machineName' | translate }}</label>
+                            <input type="checkbox" class="checkbox">
+                        </div>
+                        <div class="checkbox-horizontal">
+                            <label>{{ 'displaySetting.location' | translate }}</label>
+                            <input type="checkbox" class="checkbox">
+                        </div>
+                        <div class="checkbox-horizontal">
+                            <label>{{ 'displaySetting.installDate' | translate }}</label>
+                            <input type="checkbox" class="checkbox">
+                        </div>
+                        <div class="checkbox-horizontal">
+                            <label>{{ 'displaySetting.dataDate' | translate }}</label>
+                            <input type="checkbox" class="checkbox">
+                        </div>
+                        <div class="checkbox-horizontal">
+                            <label>{{ 'displaySetting.data' | translate }}</label>
+                            <input type="checkbox" class="checkbox">
+                        </div>
+                        <div class="checkbox-horizontal">
+                            <label>{{ 'displaySetting.status' | translate }}</label>
+                            <input type="checkbox" class="checkbox">
+                        </div>
+                    </div>
+                }
+        </div>
+        
+        <div class="machine-reg-btn">
+            <button class="btn">{{ 'displaySetting.close' | translate }}</button>
+        </div>
+    </div>

@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    /* background: #ffffff; */
+}
+
+input {
+    padding: 0.5em 1em;
+    border: solid 2px transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    transition: .3s ease;
+
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.055);
+    -webkit-backdrop-filter: blue(5px);
+    border: 1px solid rgba(208, 200, 255, 0.3);
+
+    height: 30px;
+    margin: 0.2em 1em;
+    width: 90%
+}
+
+input:focus, input:hover {
+    outline: none;
+    border-color: rgba(75, 112, 234, 0.4);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(76, 92, 234, 0.1);
+}
+
+select {
+    /* appearance: base-select; */
+    background-color: #1877f2;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+option {
+    text-align: right;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    padding: 0.75em 1em;
+    background: #1877f2;
+    margin-bottom: 1em;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.navbar > :first-child {
+    flex: 0 0 50%;
+}
+
+.navbar .leftNav {
+    margin-right: auto;
+    align-self: center;
+}
+
+.navbar .logout {
+    margin: 0.25em;
+}
+
+.navbar a {
+    align-self: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin: 1em 1em;
+    overflow: auto;
+    min-height: 300px;
+    border: 1px solid #ffffff;
+    padding: 1em 1em;
+    border-radius: 5px;
+    width: 80%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background: #fff;
+
+
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #1877f2;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 4px 4px rgba(58, 58, 58, 0.363);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.form-control {
+    margin: 20px 0;
+}
+
+.form-control label {
+    display: block;
+}
+
+.form-control input {
+    width: 100%;
+    height: 40px;
+    margin: 5px;
+    padding: 3px 7px;
+    font-size: 17px;
+}
+
+.form-control-check {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-control-check label {
+    flex: 1;
+}
+
+.form-control-check input {
+    flex: 2;
+    height: 20px;
+}
+
+.error-message {
+    margin: 1em 0;
+    font-size: 12px;
+    white-space: pre-wrap;
+}
+
+.prelogin-btn {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    width: 150px;
+
+    margin: 1em 1em;
+}
+
+.machine-reg-btn {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    margin: 1em 1em;
+}
+
+.error-message {
+    display: flex;
+    margin-left: 2em;
+    color: rgb(255, 2, 2);
+    font-size: 14px;
+}
+
+/* ▼ login page stylesheet ▼ */
+.login-navbar {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    padding: 0.75em 1em;
+    background: #1877f2;
+    margin-bottom: 1em;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 40%;
+    margin: 1em 1em;
+    overflow: auto;
+    min-height: 300px;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blue(5px);
+
+    text-align: center;
+    font-size: 20px;
+}
+
+.login-container p {
+    margin: 1em 0;
+}
+
+.form-group-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0 0 0.5em 0.5em;
+}
+
+label {
+    margin-left: 1em;
+    font-size: 16px;
+    width: 90px;
+}
+
+

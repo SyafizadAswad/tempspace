@@ -1,0 +1,87 @@
+.top-machine-data {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 1em;
+}
+
+.main-machine-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-machine-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.machine-status-section {
+    display: flex;
+    flex-direction: row;
+    margin: 1em 1em;
+}
+
+.machine-status-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    margin: 1em 1em;
+    padding: 2.5em 2.5em;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.machine-data-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+    align-content: space-between;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 1em 1em;
+    padding: 2em 2em;
+}
+
+.machine-data-box > :first-child {
+    grid-column: span 3;
+}
+
+.machine-data-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.machine-group-horizontal {
+    display: flex;
+    align-items: center;
+    margin: 0.5em 0;
+}
+
+.right-machine-section {
+    margin: 0 1em;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+
+.machine-data-table thead, .machine-data-table tbody {
+    display: block;
+}
+
+.machine-data-head th {
+    padding: 1em;
+    text-align: left;
+    font-size: 14px;
+}
+
+.machine-data-body {
+    overflow-y: auto;
+}
+
+.machine-data-body td {
+    padding: 1em;
+    text-align: left;
+    font-size: 14px;
+}

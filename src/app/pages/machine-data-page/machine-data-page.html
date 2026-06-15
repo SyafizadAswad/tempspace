@@ -1,0 +1,67 @@
+<app-user-navbar></app-user-navbar>
+
+<div class="container">
+        <div class="top-machine-data">
+            <p>{{ 'machineData.title' | translate}}</p>
+            <button routerLink="/machine" class="btn">{{ 'machineData.back' | translate}}
+            </button>
+        </div>
+
+        <div class="main-machine-data">
+            <div class="left-machine-section">
+                <div class="machine-data-group">
+                        <div class="machine-group-horizontal">
+                            <label>{{ 'machineData.machineId' | translate}}</label>
+                            <label>{{ machineInfo.machineId }}</label>
+                        </div>
+                        <div class="machine-group-horizontal">
+                            <label>{{ 'machineData.machineName' | translate}}</label>
+                            <label>{{ machineInfo.machineName }}</label>
+                        </div>
+                        <div class="machine-group-horizontal">
+                            <label>{{ 'machineData.location' | translate}}</label>
+                            <label>{{ machineInfo.location }}</label>
+                        </div>
+                        <div class="machine-group-horizontal">
+                            <label>{{ 'machineData.installDate' | translate}}</label>
+                            <label>{{ machineInfo.installDate }}</label>
+                        </div>
+                    </div>
+                
+                <div class="machine-status-section">
+                    <div class="machine-status-box">
+                        <p>{{ 'machineData.status' | translate}}</p>
+                        @for (mac of machineData().slice() | slice : 0 : 1; track $index) {
+                            <p>{{ mac.status}}</p>
+                        }
+                    </div>
+                    <div class="machine-data-box">
+                        <p>{{ 'machineData.latestData' | translate}}</p>
+                        @for (mac of machineData().slice()| slice : 0 : 1; track $index) {
+                            <app-data-gauge-bar [value]="mac.data"></app-data-gauge-bar>
+                            <p>{{ mac.data }}</p>
+                        }
+                        </div>
+                </div>
+            </div>
+            
+            <div class="right-machine-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>{{ 'machineData.dataDate' | translate}}</th>
+                            <th>{{ 'machineData.data' | translate}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (mac of machineData(); track mac.dataDate) {
+                            <tr>
+                                <td>{{ mac.dataDate | date: 'yyyy-MM-dd HH:mm:ss' }}</td>
+                                <td>{{ trimFloat(mac.data) }}</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

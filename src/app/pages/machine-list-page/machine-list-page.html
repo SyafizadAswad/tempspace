@@ -1,0 +1,107 @@
+<app-user-navbar></app-user-navbar>
+<div class="container-list">
+        
+        <div class="tools">
+            <h2>{{ 'machineList.title' | translate }}</h2>
+            <button class="btn" routerLink="/machine/register">{{ 'machineList.add' | translate }}</button>    
+            <select 
+            class="sort-options"
+            [value]="sortKey"
+            (change)="onSortInputKey($event); sortBy()">
+                <option value="" disabled selected hidden>{{ 'machineList.sortBy' | translate }}</option>
+                <option value="machineId">{{ 'machineList.machineId' | translate }}</option>
+                <option value="machineName">{{ 'machineList.machineName' | translate }}</option>
+                <option value="location">{{ 'machineList.location' | translate }}</option>
+                <option value="installDate-latest">{{ 'machineList.installDateLatest' | translate }}</option>
+                <option value="installDate-oldest">{{ 'machineList.installDateOldest' | translate }}</option>
+                <option value="status">{{ 'machineList.status' | translate }}</option>
+            </select>
+            <div class="search">
+                <input 
+                type="text"
+                [(ngModel)]="searchQuery" ngDefaultControl
+                (keydown.enter)="searchQuery"
+                placeholder="Search machine...">
+            </div>
+            <button [(ngModel)]="searchQuery" ngDefaultControl class="btn">{{ 'machineList.search' | translate }}</button>
+        </div>
+
+        <div class="table-wrap">
+            
+            <table class="machine-table">
+                <thead class="machine-head">
+                    <tr>
+                        <th>No.</th>
+                        <th>{{ 'machineList.machineId' | translate }}</th>
+                        <th>{{ 'machineList.machineName' | translate }}</th>
+                        <th>{{ 'machineList.location' | translate }}</th>
+                        <th>{{ 'machineList.installDate' | translate }}</th>
+                        <th>{{ 'machineList.dataDate' | translate }}</th>
+                        <th>{{ 'machineList.data' | translate }}</th>
+                        <th>{{ 'machineList.status' | translate }}</th>
+                        <th>{{ 'machineList.action' | translate }}</th>
+                    </tr>
+                </thead>
+                <tbody class="machine-body">
+                    @for (mac of filteredMachine(); track mac.machineId; let i = $index) {
+                        <tr>
+                            <td>{{ i + 1 }}</td>
+                            <td><a [routerLink]="['/machine', mac.machineId]">{{ mac.machineId }}</a></td>
+                            <td>{{ mac.machineName }}</td>
+                            <td>{{ mac.location }}</td>
+                            <td>{{ mac.installDate | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+                            <td>{{ mac.dataDate | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+                            <td>{{ trimFloat(mac.data) }}</td>
+                            <td [ngStyle]="{'color': getStatusColor(mac.status)}">{{ 'machineList.' + mac.status | translate }}</td>
+                            <td class="action-cell">
+                                <div class="row-actions" [class.row-actions--open]="isActionsMenuOpen(mac)">
+                                    <button 
+                                        class="btn row-actions-trigger"
+                                        type="button"
+                                        (click)="toggleActionsMenu(mac.machineId, $event)"
+                                        [attr.aria-expanded]="isActionsMenuOpen(mac)"
+                                        aria-haspopup="menu">
+                                        Actions
+                                        <span class="row-actions-chevron" aria-hidden="true">▼</span>
+                                    </button> 
+                                    @if (isActionsMenuOpen(mac)) {
+                                        <div class="row-actions-menu" role="menu" (click)="$event.stopPropagation()">
+                                            <button
+                                                type="button"
+                                                class="row-actions-item"
+                                                (click)="openEditModal(mac)"
+                                                role="menuItem"
+                                            >
+                                                編集
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="row-actions-item"
+                                                role="menuItem"
+                                                (click)="onMenuDelete(mac)">
+                                                {{ 'machineList.delete' | translate }}
+                                            </button>
+                                        </div>
+                                    }
+                                </div>
+                                <button class="btn edit-row-btn" type="button" (click)="openEditModal(mac)">
+                                    編集
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        </div>
+
+        <div *ngIf="editModalOpen()" class="modal-backdrop" (click)="closeEditModal()">
+            <div class="modal-shell" (click)="$event.stopPropagation()">
+                <app-machine-edit
+                    [machine]="selectedMachine()"
+                    [isModal]="true"
+                    (close)="closeEditModal()"
+                    (updated)="onMachineUpdated()"
+                ></app-machine-edit>
+            </div>
+        </div>

@@ -1,0 +1,8 @@
+<div class="login-navbar">
+    <div class="company-title">{{ 'common.companyName' | translate }}</div>
+    <select [value]="selectedLanguage()" (change)="updateLanguage($event)">
+        <option value="ja">{{ 'language.ja' | translate }}</option>
+        <option value="en">{{ 'language.en' | translate }}</option>
+        <option value="bm">{{ 'language.bm' | translate }}</option>
+    </select>
+</div>

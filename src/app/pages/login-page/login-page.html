@@ -1,0 +1,32 @@
+<app-login-navbar></app-login-navbar>
+<div class="login-container">
+    <p>{{ 'common.title' | translate }}</p>
+    <p>{{ 'login.login' | translate }}</p>
+
+    <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-group-vertical">
+            <label>{{ 'login.userId' | translate }}</label>
+            <input type="text"
+            formControlName="userId"
+            (keydown.enter)="submit()">
+        </div>
+        @if (form.controls.userId.hasError('required') && form.controls.userId.touched){
+            <small class="error-message">{{ 'errorMessage.requiredId' | translate }}</small>
+        }
+        <div class="form-group-vertical">
+            <label>{{ 'login.password' | translate }}</label>
+            <input type="password"
+            formControlName="password"
+            (keydown.enter)="submit()">
+        </div>
+        @if (form.controls.password.hasError('required') && form.controls.password.touched){
+            <small class="error-message">{{ 'errorMessage.requiredPassword' | translate }}</small>
+        }
+    </form>
+
+
+    <div class="prelogin-btn">
+        <button class="btn" (click)="submit()">{{ 'login.login' | translate }}</button>
+        <button routerLink="/register" class="btn">{{ 'login.register' | translate }}</button>
+    </div>
+</div>

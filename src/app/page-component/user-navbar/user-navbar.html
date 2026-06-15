@@ -1,0 +1,10 @@
+<div class="navbar">
+        <a routerLink="/machine" class="company-title">{{ 'common.companyName' | translate }}</a>
+        <select [value]="selectedLanguage()" (change)="updateLanguage($event)">
+            <option value="ja">{{ 'language.ja' | translate }}</option>
+            <option value="en">{{ 'language.en' | translate }}</option>
+            <option value="bm">{{ 'language.bm' | translate }}</option>
+        </select>
+        <a [routerLink]="['/user/', currentUser()?.username?.[0]]">{{ currentUser()?.username?.[1] }}</a>
+        <a routerLink="/login" (click)="logout()">{{ 'common.logout' | translate }}</a>
+    </div>

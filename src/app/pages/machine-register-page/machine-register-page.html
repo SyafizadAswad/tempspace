@@ -1,0 +1,61 @@
+<app-user-navbar></app-user-navbar>
+<div class="form-machine-container">
+    <p class="form-machine-title">{{ 'registerMachine.title' | translate }}</p>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-machine">
+            <label class="form-machine-label">{{ 'registerMachine.machineId' | translate }}</label>
+            <div class="input-group">
+                <input type="text"
+                formControlName="machineId"
+                (keydown.enter)="submit()">
+                @if (form.controls.machineId.hasError('required') && form.controls.machineId.touched) {
+                    <small class="error-message">{{ 'errorMessage.requiredMachineId' | translate }}</small>
+                }@else if (form.controls.machineId.hasError('maxlength') && form.controls.machineId.touched) {
+                    <small class="error-message">{{ 'errorMessage.maxLengthMachineId' | translate }}</small>
+                }@else if (form.controls.machineId.hasError('minlength') && form.controls.machineId.touched) {
+                    <small class="error-message">{{ 'errorMessage.maxLengthMachineId' | translate }}</small>
+                }@else if (form.controls.machineId.hasError('pattern') && form.controls.machineId.touched) {
+                    <small class="error-message">{{ 'errorMessage.patternMachineIdFormat' | translate }}</small>
+                }
+            </div>
+            
+            <label class="form-machine-label">{{ 'registerMachine.machineName' | translate }}</label>
+            <div class="input-group">
+                <input type="text"
+                formControlName="machineName"
+                (keydown.enter)="submit()">
+            @if (form.controls.machineName.hasError('required') && form.controls.machineName.touched) {
+                <small class="error-message">{{ 'errorMessage.requiredMachineName' | translate }}</small>
+            }
+            </div>
+        </div>
+            
+        <div class="form-machine">
+            <label class="form-machine-label">{{ 'registerMachine.location' | translate }}</label>
+            <div class="input-group">
+                <input type="text"
+                formControlName="location"
+                (keydown.enter)="submit()">
+                @if (form.controls.location.hasError('required') && form.controls.location.touched) {
+                    <small class="error-message">{{ 'errorMessage.requiredLocation' | translate }}</small>
+                }
+            </div>
+            
+            <label class="form-machine-label">{{ 'registerMachine.installDate' | translate }}</label>
+            <div class="input-group">
+                <input type="date"
+                formControlName="installDate">
+                @if (form.controls.installDate.hasError('required') && form.controls.installDate.touched) {
+                    <small class="error-message">{{ 'errorMessage.requiredInstallDate' | translate }}</small>
+                }
+            </div>
+        </div>
+            
+        </form>
+        
+        <div class="machine-reg-btn">
+        <button class="btn" (click)="submit()">{{ 'registerMachine.register' | translate }}</button>
+        <button class="btn" routerLink="/machine">{{ 'registerMachine.back' | translate }}</button>
+    </div>
+</div>

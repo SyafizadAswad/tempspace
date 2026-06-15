@@ -1,0 +1,57 @@
+<app-login-navbar></app-login-navbar>
+<div class="login-container">
+    <p>{{ 'common.title' | translate }}</p>
+    <p>{{ 'registerUser.title' | translate}}</p>
+    
+    <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-group-vertical">
+            <label>{{ 'registerUser.userId' | translate}}</label>
+            <input type="text"
+            formControlName="userId"
+            (keydown.enter)="submit()">
+        </div>
+
+            @if (form.controls.userId.hasError('required') && form.controls.userId.touched){
+                <small class="error-message">{{ 'errorMessage.requiredId' | translate }}</small>
+            }@else if (form.controls.userId.hasError('minlength') && form.controls.userId.touched){
+                <small class="error-message">{{ 'errorMessage.maxLengthId' | translate }}</small>
+            }@else if (form.controls.userId.hasError('maxlength') && form.controls.userId.touched){
+                <small class="error-message">{{ 'errorMessage.maxLengthId' | translate }}</small>
+            }@else if (form.controls.userId.hasError('pattern') && form.controls.userId.touched){
+                <small class="error-message">{{ 'errorMessage.patternId' | translate }}</small>
+            }
+
+            <div class="form-group-vertical">
+                <label>{{ 'registerUser.username' | translate}}</label>
+                <input type="text"
+                formControlName="username"
+                (keydown.enter)="submit()">
+            </div>
+
+            @if (form.controls.username.hasError('required') && form.controls.username.touched){
+                <small class="error-message">{{ 'errorMessage.requiredUsername' | translate }}</small>
+            }@else if (form.controls.username.hasError('maxlength') && form.controls.username.touched){
+                <small class="error-message">{{ 'errorMessage.maxLengthUsername' | translate }}</small>
+            }
+
+            <div class="form-group-vertical">
+                <label>{{ 'registerUser.password' | translate}}</label>
+                <input type="password"
+                formControlName="password"
+                (keydown.enter)="submit()">
+            </div>
+
+            @if (form.controls.password.hasError('required') && form.controls.password.touched){
+                <small class="error-message">{{ 'errorMessage.requiredPassword' | translate }}</small>
+            }@else if (form.controls.password.hasError('minlength') && form.controls.password.touched){
+                <small class="error-message">{{ 'errorMessage.minLengthPassword' | translate }}</small>
+            }@else if (form.controls.password.hasError('pattern') && form.controls.password.touched){
+                <small class="error-message">{{ 'errorMessage.patternPassword' | translate }}</small>
+            }
+        </form>
+
+        <div class="prelogin-btn">
+            <button class="btn" (click)="submit()">{{ 'registerUser.register' | translate}}</button>
+            <button class="btn" routerLink="/login">{{ 'registerUser.back' | translate}}</button>
+        </div>
+    </div>

@@ -1,0 +1,116 @@
+{
+    "common": {
+        "companyName": "Tanaka Manufacturing Sdn. Bhd.",
+        "title": "Aplikasi Pantauan Mesin",
+        "logout": "Log Keluar"
+    },
+    "language": {
+        "ja": "Bahasa Jepun",
+        "en": "Bahasa Inggeris",
+        "bm": "Bahasa Melayu"
+    },
+    "errorMessage": {
+        "requiredId": "ID pengguna diperlukan",
+        "requiredPassword": "Kata laluan diperlukan",
+        "requiredUsername": "Nama pengguna diperlukan",
+        "maxLengthId": "ID pengguna perlu ditetapkan dengan 4 angka",
+        "maxLengthUsername": "Nama pengguna perlu ditetapkan dalam 30 aksara",        
+        "minLengthPassword": "Kata laluan perlu melebihi 8 aksara",
+        "patternId": "ID tidak boleh mengandungi nombor atau huruf sudut penuh",
+        "patternPassword": "Kata laluan perlu ditetapkan dengan gabungan huruf, nombor dan simbol",
+
+        "requiredMachineId": "ID mesin diperlukan",
+        "requiredMachineName": "Nama mesin diperlukan",
+        "requiredLocation": "Lokasi mesin diperlukan",
+        "requiredInstallDate": "Tarikh pemasangan diperlukan",
+        "maxLengthMachineId": "ID mesin perlu ditetapkan dengan 8 aksara",
+        "patternMachineIdWidth": "Id mesin tidak boleh mengandungi nombor atau huruf sudut penuh",
+        "patternMachineIdFormat": "ID mesin perlu dalam format 'AAA-0000'\n(A: alphabet bebas, 0: nombor bebas)"
+    },
+    "login": {
+        "login": "Log masuk",
+        "userId": "ID pengguna",
+        "password": "Kata laluan",
+        "register": "Daftar"
+    },
+    "registerUser": {
+        "title": "Daftar",
+        "login": "Log masuk",
+        "userId": "ID pengguna",
+        "password": "Kata laluan",
+        "username": "Nama pengguna",
+        "register": "Daftar",
+        "back": "Kembali"
+    },
+    "machineList": {
+        "title": "Senarai mesin",
+        "add": "Tambah baru",
+        "sortBy": "Susun dengan...",
+        "search": "Cari",
+        "machineId": "ID mesin",
+        "machineName": "Nama mesin",
+        "location": "Lokasi mesin",
+        "installDate": "Tarikh pemasangan",
+        "installDateLatest": "Tarikh pemasangan(baru)",
+        "installDateOldest": "Tarikh pemasangan(lama)",
+        "dataDate": "Tarikh data",
+        "data": "Data",
+        "status": "Status",
+        "action": "Tetapan",
+        "正常": "STABIL",
+        "異常": "TIDAK STABIL",
+        "edit": "Sunting",
+        "delete": "Buang"
+    },
+    "registerMachine": {
+        "title": "Tambah mesin baharu",
+        "machineId": "ID mesin",
+        "machineName": "Nama mesin",
+        "location": "Lokasi mesin",
+        "installDate": "Tarikh pemasangan",
+        "register": "Tambah",
+        "back": "Kembali"
+    },
+    "displaySetting": {
+        "greeting": "Hai!",
+        "title": "Tetapan paparan",
+        "machineId": "ID mesin",
+        "machineName": "Nama mesin",
+        "location": "Lokasi mesin",
+        "installDate": "Tarikh pemasangan",
+        "dataDate": "Tarikh data",
+        "data": "Data",
+        "status": "Status",
+        "close": "Tutup"
+    },
+    "machineData": {
+        "title": "Data mesin",
+        "machineId": "ID mesin",
+        "machineName": "Nama mesin",
+        "location": "Lokasi",
+        "installDate": "Tarikh pemasangan",
+        "status": "Status",
+        "latestData": "Data terbaru",
+        "dataDate": "Tarikh data",
+        "data": "Data",
+        "正常": "STABIL",
+        "異常": "TIDAK STABIL",
+        "back": "Kembali"
+    },
+    "machineEdit": {
+        "title": "Sunting maklumat mesin",
+        "machineId": "ID mesin",
+        "machineName": "Nama mesin",
+        "location": "Lokasi mesin",
+        "installDate": "Tarikh pemasangan",
+        "save": "Simpan",
+        "cancel": "Batal"
+    },
+    "alert": {
+        "delete": "Anda pasti mahu padamkan?",
+        "register": "Anda pasti mahu daftarkan?", 
+        "edit": "Anda pasti mahu suntingkan?" ,
+        "inputError": "Ralat dalam isian."
+    }
+    
+}

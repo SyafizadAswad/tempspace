@@ -1,0 +1,116 @@
+{
+    "common": {
+        "companyName": "株式会社タナカ製作所",
+        "title": "機械監修アプリ",
+        "logout": "ログアウト"
+    },
+    "language": {
+        "ja": "日本語",
+        "en": "英語",
+        "bm": "マレー語"
+    },
+    "errorMessage": {
+        "requiredId": "ユーザーIDを設定してください",
+        "requiredPassword": "パスワードを設定してください",
+        "requiredUsername": "ユーザー名を設定してください",
+        "maxLengthId": "ユーザーIDは4桁に設定してください",
+        "maxLengthUsername": "ユーザー名は30文字以内に設定してください",        
+        "minLengthPassword": "パスワードは8文字以上に設定してください",
+        "patternId": "ユーザーIDは半角数字のみに設定してください",
+        "patternPassword": "パスワードは英文字、数字、記号の組み合わせに設定してください",
+
+        "requiredMachineId": "機械IDを設定してください",
+        "requiredMachineName": "機械名を設定してください",
+        "requiredLocation": "設置場所を設定してください",
+        "requiredInstallDate": "設置日を設定してください",
+        "maxLengthMachineId": "機械IDを8文字に設定してください",
+        "patternMachineIdWidth": "機械IDは全角英数字以外に設定してください",
+        "patternMachineIdFormat": "機械IDは「AAA-0000」(Aは任意英文字、\n0は任意数字)の形式に設定してください。"
+
+    },
+    "login": {
+        "login": "ログイン",
+        "userId": "ユーザーID",
+        "password": "パスワード",
+        "register": "登録"
+    },
+    "registerUser": {
+        "title": "ユーザー登録",
+        "login": "ログイン",
+        "userId": "ユーザーID",
+        "password": "パスワード",
+        "username": "ユーザー名",
+        "register": "登録",
+        "back": "戻る"
+    },
+    "machineList": {
+        "title": "機械一覧",
+        "add": "新規登録",
+        "sortBy": "並び替え...",
+        "search": "検索",
+        "machineId": "機械ID",
+        "machineName": "機械名",
+        "location": "設置場所",
+        "installDate": "設置日",
+        "installDateLatest": "設置日(新しい順）",
+        "installDateOldest": "設置日(古い順）",
+        "dataDate": "データ取得日時",
+        "data": "データ",
+        "status": "ステータス",
+        "action": "アクション",
+        "正常": "正常",
+        "異常": "異常",
+        "edit": "編集",
+        "delete": "削除"
+    },
+    "registerMachine": {
+        "title": "新規機械登録",
+        "machineId": "機械ID",
+        "machineName": "機械名",
+        "location": "設置場所",
+        "installDate": "設置日",
+        "register": "登録",
+        "back": "戻る"
+    },
+    "displaySetting": {
+        "greeting": "こんにちは！",
+        "title": "表示設定",
+        "machineId": "機械ID",
+        "machineName": "機械名",
+        "location": "設置場所",
+        "installDate": "設置日",
+        "dataDate": "データ取得日時",
+        "data": "データ",
+        "status": "ステータス",
+        "close": "閉じる"
+    },
+    "machineData": {
+        "title": "機械データ",
+        "machineId": "機械ID",
+        "machineName": "機械名",
+        "location": "設置場所",
+        "installDate": "設置日",
+        "status": "ステータス",
+        "latestData": "最新データ",
+        "dataDate": "データ取得日時",
+        "data": "データ",
+        "正常": "正常",
+        "異常": "異常",
+        "back": "戻る"
+    },
+    "machineEdit": {
+        "title": "機械情報編集",
+        "machineId": "機械ID",
+        "machineName": "機械名",
+        "location": "設置場所",
+        "installDate": "設置日",
+        "save": "保存",
+        "cancel": "キャンセル"
+    },
+    "alert": {
+        "delete": "削除します。本当によろしいですか？",
+        "register": "登録します。本当によろしいですか？", 
+        "edit": "編集します。本当によろしいですか？" ,
+        "inputError": "入力エラー発生"
+    }
+}

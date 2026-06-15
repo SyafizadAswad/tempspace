@@ -1,0 +1,33 @@
+<div class="form-machine-modal">
+    <p class="form-machine-title">{{ 'machineEdit.title' | translate}}</p>
+
+    <form class="machine-form" [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-machine">
+            <div class="input-group">
+                <label class="form-machine-label">{{ 'machineEdit.machineId' | translate }}</label>
+                <input type="text" [value]="machineInfo.machineId" disabled>
+            </div>
+
+            <div class="input-group">
+            <label class="form-machine-label">{{ 'machineEdit.machineName' | translate }}</label>
+                <input type="text" [placeholder]="machineInfo.machineName" formControlName="machineName">
+            </div>
+
+            <div class="input-group">
+            <label class="form-machine-label">{{ 'machineEdit.location' | translate }}</label>
+                <input type="text" [placeholder]="machineInfo.location" formControlName="location">
+            </div>
+
+            <div class="input-group">
+            <label class="form-machine-label">{{ 'machineEdit.installDate' | translate }}</label>
+                <input type="date" formControlName="installDate">
+            </div>
+        </div>
+
+        </form>
+
+        <div class="machine-reg-btn">
+            <button class="btn" type="button" (click)="submit()">{{ 'machineEdit.save' | translate }}</button>
+            <button class="btn" type="button" (click)="cancel()">{{ 'machineEdit.cancel' | translate }}</button>
+        </div>
+</div>

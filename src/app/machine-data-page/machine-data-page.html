@@ -1,0 +1,81 @@
+<app-user-navbar></app-user-navbar>
+
+<div class="container">
+        <div class="top-machine-data">
+            <p>機械データ</p>
+            <button routerLink="/machine" class="btn">戻る
+            </button>
+        </div>
+
+        <div class="main-machine-data">
+            <div class="left-machine-section">
+                <div class="machine-data-group">
+                    <div class="machine-group-horizontal">
+                        <label>機械ID</label>
+                        <label>AAA-0001</label>
+                    </div>
+                    <div class="machine-group-horizontal">
+                        <label>機械名</label>
+                        <label>machineA</label>
+                    </div>
+                    <div class="machine-group-horizontal">
+                        <label>設置場所</label>
+                        <label>西工場</label>
+                    </div>
+                    <div class="machine-group-horizontal">
+                        <label>設置日</label>
+                        <label>2024/02/03</label>
+                    </div>
+                </div>
+                
+                <div class="machine-status-section">
+                    <div class="machine-status-box">
+                        <p>Status</p>
+                        <p>正常</p>
+                    </div>
+                    <div class="machine-data-box">
+                        <p>latest data</p>
+                        <app-data-gauge-bar></app-data-gauge-bar>
+                        <p>26</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-machine-section">
+                <table class="machine-data-table">
+                    <thead class="machine-data-head">
+                        <tr>
+                            <th>データ取得日時</th>
+                            <th>データ</th>
+                        </tr>
+                    </thead>
+                    <tbody class="machine-data-body">
+                        <tr>
+                            <td>2024/02/15 14:35:12</td>
+                            <td>20.1</td>
+                        </tr>
+                        <tr>
+                            <td>2024/02/15 14:35:12</td>
+                            <td>20.1</td>
+                        </tr>
+                        <tr>
+                            <td>2024/02/15 14:35:12</td>
+                            <td>20.1</td>
+                        </tr>
+                        <tr>
+                            <td>2024/02/15 14:35:12</td>
+                            <td>20.1</td>
+                        </tr>
+                        <tr>
+                            <td>2024/02/15 14:35:12</td>
+                            <td>20.1</td>
+                        </tr>
+                        <tr>
+                            <td>2024/02/15 14:35:12</td>
+                            <td>20.1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

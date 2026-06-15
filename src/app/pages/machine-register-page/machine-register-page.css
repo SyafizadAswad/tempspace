@@ -1,0 +1,40 @@
+/*machine reg stylesheet */
+
+.form-machine-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    margin: 1em 1em;
+    overflow: auto;
+    min-height: 300px;
+    border: 1px solid #ffffff;
+    padding: 1em 1em;
+    width: 70%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background: #ffffff;
+    font-size: 20px;
+}
+
+.form-machine-title {
+    margin: 0.5em 0 1em 0.75em;
+}
+
+.form-machine {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-machine-label {
+    display: flex;
+    align-self: flex-start;
+    margin-top: 0.5em;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
